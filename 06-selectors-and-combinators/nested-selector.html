@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested Selector</title>
+    <style>
+        #container{
+            /* Nested CSS Rule */
+            h2 {
+                color: red;
+            }
+
+            p {
+                border: 1px solid gray;
+                padding: 10px;
+                border-radius: 10px;;
+
+                span {
+                    background-color: yellow;
+                    font-size: 1.4rem;
+                    padding: 5px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    
+                    &:hover {
+                        background-color: aqua;
+                    }
+                }
+            }
+        }    
+    </style>
+</head>
+<body>
+    <h1>Nested Selector &</h1>
+    <div id="container">
+        <h2>Heading</h2>
+        <p>
+            Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit. Dolorem quo nobis animi corrupti molestiae repellendus accusantium fuga? Sapiente, aliquam recusandae commodi, corporis temporibus placeat, fugit voluptatibus saepe sunt sequi itaque!
+        </p>
+        <span>Test</span>
+    </div>
+    <hr>
+    <h2>Heading</h2>
+    <p>
+        Lorem <span>ipsum</span> dolor sit amet consectetur adipisicing elit. At fuga, odio voluptatum sequi dolores dolore optio nemo dolor asperiores eveniet cumque similique atque natus iure voluptatem labore sit, harum unde?
+    </p>
+</body>
+</html>

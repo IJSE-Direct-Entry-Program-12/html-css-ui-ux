@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Specificity Algo</title>
+    <style>
+        body h1#my-heading.heading[title] {   /* 1-2-2 */
+            text-align: center;
+            color: blue !important;
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 id="my-heading" 
+    class="heading" 
+    title="This is heading" 
+    style="border: 1px solid black;
+    color: black !important">
+    The Specificity Algo
+    </h1>
+    <style>
+        h1#my-heading {    /* 1-0-1 */
+            color: white;
+        }
+    </style>
+    <style>
+        body h1#my-heading.heading[title] {    /* 1-2-2 */
+            color: green !important;
+        }
+    </style>
+</body>
+
+</html>

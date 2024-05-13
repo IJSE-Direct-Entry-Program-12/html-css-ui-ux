@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Selectors and Combinators</title>
+    <style>
+        /* 1. Universal Selector (*)
+           (Specificity value 0) */
+        /* *{
+            border: 1px solid black;
+            color: red
+        } */
+
+        /* 2. ID Selector (#) */
+        /* #abc {
+           color: red; 
+        } */
+
+        /* 3. Class Selector (.) */
+        /* .abc {
+            color: green;
+        } */
+
+        /* 4. Attribute Selector ([name="value"]) */
+        /* [class="edf"]{
+           color: red; 
+        }
+
+        [title]{
+            color: blue;
+        } */
+
+        /* 5. Type Selector (tagname) */
+        /* h1 {
+            color: red;
+        }
+
+        li{
+            color: blue;
+        } */
+
+        /* .abc {
+           color: green; 
+        }
+
+        .edf {
+            color: green;
+        }
+
+        [title]{
+            color: green;
+        } */
+
+        /* Comma is used to group selectors
+        But it is niether a combinator or selector */
+        .abc, .edf, [title]{
+            color: green;
+        }
+
+
+    </style>
+</head>
+<body>
+    <h1 class="abc">CSS Selectors and Combinators</h1>
+    <ul>
+        <li title="Tooltip text">First</li>
+        <li class="abc">Second</li>
+        <li>Third</li>
+        <li class="edf">Fourth</li>
+    </ul>
+    <style>
+        /* 1. Child Combinator (>) */
+        /* ol > li > ul > li > span {
+            color: red;
+            background-color: yellow;
+        } */
+
+        /* 2. Descendant Combinator (Space) */
+        ol ul span {
+            color: red;
+            background-color: yellow;
+        }
+    </style>
+    <ol>
+        <li>First Item</li>
+        <li>
+            Second <span>Item</span>
+            <ul>
+                <li>Nested List Item 1</li>
+                <li>Nested <span>List</span> Item 2</li>
+                <li>Nested <span>List</span> Item 3</li>
+            </ul>
+        </li>
+        <li>Third Item</li>
+        <li>Fourth Item</li>
+        <li>Fifth Item</li>
+    </ol>
+    <p>This is a <span>block</span> too</p>
+    <hr>
+    <style>
+        /* 3. Adjacent(Next) Siblings Combinator (+) */
+        /* div > p + p {
+            background-color: yellow;
+        } */
+
+        /* 4. General(Subsequent) Siblings Combinator (~) */
+        div > div > div ~ p {
+            background-color: yellow;
+        }
+    </style>
+    <div>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <div>Division 1</div>
+        <div>Division 2
+            <p>Nested Paragraph 1</p>
+            <div>Nested Division</div>
+            <p>Nested Paragraph 2</p>
+            <p>Nested Paragraph 3</p>
+            <span>Span Element</span>
+            <p>Nested Paragraph 4</p>
+        </div>
+        <p>Paragraph 3</p>
+        <div>Division 3</div>
+        <p>Paragraph 4</p>
+        <p>Paragraph 5</p>
+        <p>Paragraph 6</p>
+        <div>Division 4</div>
+        <div>Division 5</div>
+        <p>Paragraph 7</p>
+    </div>
+    <hr>
+    <h3><a href="nested-selector.html">Nested Selector (&)</a></h3>
+</body>
+</html>
