@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning</title>
+    <style>
+        #heading {
+            left: 100px;
+            top: 100px;
+            right: 50px;
+            bottom: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">Positioning</h1>
+    Go <a href="index.html">home</a>
+    <dl>
+        <dt><b>Statically Positioned <br> 
+            (But we don't usually call them 
+            <em>Positioned Elements</em>)
+        </b></dt>
+        <dd>Static (DEFAULT)</dd>
+        <dt><b>Positioned Elements</b></dt>
+        <dd>Relative</dd>
+        <dd>Absolute</dd>
+        <dd>Fixed</dd>
+        <dd>
+            <a href="sticky-position.html">
+                Sticky (CSS3)
+            </a>
+        </dd>
+    </dl>
+    <style>
+        #heading-relative {
+            background-color: yellow;
+            padding: 0.5rem;
+            position: relative;
+            /* left: 100px; */
+            /* top: -100px; */
+            right: 20px;
+            bottom: 10px;
+        }
+    </style>
+    <h2 id="heading-relative">Relative Posititon</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti consectetur adipisci perspiciatis, ex nulla velit at natus minima eius molestias atque tenetur, facere earum, enim ad ducimus voluptates laboriosam nobis?</p>
+    <style>
+        body {
+            /* position: relative; */
+            border: 1px solid red;
+        }
+        #heading-absolute {
+            background-color: lime;
+            padding: 0.5rem;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin: 0;
+            /* top: 0; */
+        }
+    </style>
+    <h2 id="heading-absolute">Absolute Posititon</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim magnam quidem illo nulla unde iusto quos ea, vitae magni deleniti similique tenetur aperiam modi exercitationem nobis! Voluptate illo perspiciatis voluptatem?</p>
+    <style>
+        #outer-div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            background-color: yellow;
+            position: relative;
+
+            #inner-div {
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                width: 100px;
+                height: 100px;
+                background-color: red;
+            }
+        }
+    </style>
+    <div id="outer-div">
+        <div id="inner-div"></div>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum vero, consequatur ut incidunt culpa autem assumenda enim quo sapiente officia dolor impedit libero provident magnam, corrupti, voluptates vitae voluptas ad?
+        </p>
+    </div>
+    Go to <a href="initial-body-block.html">Initial Body Block</a>
+    <style>
+        #heading-fixed {
+            background-color: lightblue;
+            padding: 0.5rem;
+            position: fixed;
+            /* top: 0; */
+            left: 0;
+            /* right: 0; */
+            bottom: 0;
+            margin: 0;
+        }
+    </style>
+    <h2 id="heading-fixed">Fixed Position</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus totam aliquid unde corrupti, eius et possimus dolor architecto in voluptatibus nesciunt quod minima porro qui laboriosam aspernatur dolorem corporis omnis?
+    </p>
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem, voluptas voluptatum. Quidem unde maxime fuga recusandae. Unde, quam pariatur, enim ipsam perferendis sequi repudiandae voluptatibus totam, quisquam maxime exercitationem quos!
+    </p>
+</body>
+</html>

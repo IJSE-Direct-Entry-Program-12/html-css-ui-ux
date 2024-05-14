@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replaced vs. Non-replaced Elements</title>
+    <style>
+        div#first-div {
+            display: block;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        #second-div {
+            span{
+                border: 1px solid black;
+                &:first-child {
+                    display: block;
+                    width: 250px;
+                    height: 50px;
+                    /* display: none; */
+                    /* visibility: hidden; */
+                    background-color: green;
+                }
+                &:last-child{
+                    background-color: plum;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Replaced vs. Non-replaced Elements</h1>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta repellat natus illum ipsa excepturi quae, rem, ducimus a minima quidem nesciunt. Iusto quas ducimus explicabo nobis minus veniam, dolores quos.
+    </p>
+    <strong>This is a strong element</strong>
+    <div id="first-div">This is a block-level element</div>
+    <span>This is an inline-element</span>
+    <div id="second-div">
+        <span>This is an inline-level element1</span>
+        <span>This is an inline-level element2</span>
+    </div>
+    <style>
+        img {
+            width: 150px;
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+    </style>
+    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
+        alt="Google Logo">
+    <span>Hello</span>
+    <span>World</span>
+</body>
+</html>
