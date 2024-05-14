@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Columns</title>
+</head>
+<body>
+    <h1>Columns</h1>
+    Go <a href="index.html">home</a>
+    <h2>1. Method (via Inline-Blocks)</h2>
+    <style>
+        #container-1 {
+            background-color: yellow;
+            height: 200px;
+            :first-child {
+                background-color: lightpink;
+            }
+            :nth-child(2){
+                background-color: green;
+            }
+            :last-child {
+                background-color: lightblue;
+            }
+        }
+        .col {
+            height: 100%;
+            width: calc(100% / 3);
+            display: inline-block;
+        }
+    </style>
+    <div id="container-1">
+        <div class="col">
+            COLUMN 1</div><div class="col">
+                COLUMN 2</div><div class="col">
+                    COLUMN 3</div>
+    </div>
+    <h2>2. Method (via Floats)</h2>
+    <!-- div#container-2>div.col*3 -->
+    <style>
+        #container-2 {
+            background-color: yellow;
+            height: 200px;
+            :first-child {
+                float: right;
+                background-color: lightpink;
+            }
+            :nth-child(2){
+                float: left;
+                background-color: green;
+            }
+            :last-child {
+                float: right;
+                background-color: lightblue;
+            }
+        }
+        .col2 {
+            width: calc(100% / 3);
+            height: 100%;
+        }
+        .clearfix {
+            clear: both;
+        }
+    </style>
+    <div id="container-2">
+        <div class="col2">COLUMN 1</div>
+        <div class="col2">COLUMN 2</div>
+        <div class="col2">COLUMN 3</div>
+    </div>
+    <div class="clearfix"></div>
+    <style>
+        #container-3 {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .col3 {
+            height: 200px;
+            vertical-align: top;
+        }
+        tr > .col3:first-child {
+            background-color: lightpink;
+        }
+        tr > .col3:nth-child(2) {
+            background-color: lightgreen;
+        }
+        tr > .col3:last-child {
+            background-color: lightblue;
+        }
+    </style>
+    <h2>3. Method (via Table)</h2>
+    <table id="container-3">
+        <tr>
+            <td class="col3">COLUMN1</td>
+            <td class="col3">COLUMN2</td>
+            <td class="col3">COLUMN3</td>
+        </tr>
+    </table>
+</body>
+</html>

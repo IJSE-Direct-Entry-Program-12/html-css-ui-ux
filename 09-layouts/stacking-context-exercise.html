@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacking Context Exercise</title>
+</head>
+<body>
+    <h1>Stacking Context Exercise</h1>
+    Go <a href="stacking-contexts.html">back</a>
+    <style>
+        #container1 {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+            z-index: 3;
+        }
+        #container2 {
+            width: 150px;
+            height: 150px;
+            background-color: limegreen;
+            /* position: relative;
+            left: 75px;
+            top: -75px; */
+            transform: translate(50%, -75%);
+            z-index: 1;
+        }
+        #container3 {
+            width: 150px;
+            height: 150px;
+            background-color: lightsalmon;
+            transform: translate(75%, calc(-120% * 2));
+            /* position: relative;
+            left: 100px;
+            top: -325px; */
+            z-index: 2;
+        }
+        .circle{
+            position: fixed;
+            width: 75px;
+            height: 75px;
+            border: 1px solid black;
+            border-radius: 100%;
+            text-align: center;
+        }
+
+        #container1 .circle{
+            background-color: inherit;
+            left: 0px;
+            top: 0px;
+            /* z-index: 1; */
+        }
+
+        #container2 .circle{
+            background-color: inherit;
+            z-index: 2000;
+            top: 100px;
+            left: 0;
+        }
+
+        #container3 .circle{
+            background-color: inherit;
+            top: 75px;
+        }
+    </style>
+    <div id="container1">
+        <div class="circle">C1</div>
+    </div>
+    <div id="container2">
+        <div class="circle">C2</div>
+    </div>
+    <div id="container3">
+        <div class="circle">C3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stacking Contexts</title>
+</head>
+<body>
+    <h1>Stacking Contexts</h1>
+    Go <a href="index.html">home</a>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            position: relative;
+            top: 55px;
+            left: 100px;
+            z-index: 2;
+        }
+
+        #container-1 {
+            width: 400px;
+            height: 350px;
+            background-color: yellow;
+            border: 1px solid black;
+            position: relative;
+            z-index: 2;
+        }
+
+        .box {
+            width: 75px;
+            height: 75px;
+            background-color: limegreen;
+            border: 1px solid black;
+            position: absolute;
+        }
+
+        .circle {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 1px solid red;
+            border-radius: 100%;
+            position: absolute;
+            left: 150px;
+            top: 30%;
+            transform: scale(1.4);
+            z-index: 1;
+        }
+
+        #container-1 :first-child {     /* Box 1 */
+            left: 30%;
+            top: -5px;
+            transform: scale(2.2);
+            z-index: 3000;
+        }
+
+        #container-1 :last-child {      /* Box 2 */
+            left: 55%;
+            top: 100px;
+            transform: scale(1.2);
+            z-index: 1;
+        }
+    </style>
+
+    <div id="container-1">
+        <div class="box">Box1</div>
+        <div class="circle"></div>
+        <div class="box">Box2</div>
+    </div>
+    <!-- <div id="container-2">
+        <div class="box"></div>
+        <div class="circle"></div>
+    </div> -->
+
+    <h4>
+        <a href="stacking-context-exercise.html">
+            Stacking Context Exercise
+        </a>
+    </h4>
+</body>
+</html>

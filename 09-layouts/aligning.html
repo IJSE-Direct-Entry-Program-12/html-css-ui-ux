@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aligning</title>
+    <style>
+        h1 {
+            background-color: lime;
+            text-align: center;
+
+            span {
+                background-color: lightskyblue;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        <span>Aligning</span>
+    </h1>
+    Go <a href="index.html">home</a>
+    <style>
+        #container-1 {
+            margin-top: 10px;
+            height: 150px;
+            background-color: yellow;
+        }
+
+        #box-1 {
+            background-color: red;
+            width: 75px;
+            height: 75px;
+            /* This doesn't work for margin top/bottom */
+            margin: auto;
+            /* float: right; */
+        }
+    </style>
+    <div id="container-1">
+        <div id="box-1"></div>
+    </div>
+
+    <style>
+        #container-2 {
+            background-color: limegreen;
+            height: 150px;
+            margin-top: 10px;
+        }
+
+        #box-2 {
+            width: 75px;
+            height: 75px;
+            background-color: black;
+            position: relative;
+            /* left: 100px; */
+            /* transform: translateX(100px); */
+
+            left: 50%;
+            top: 50%;
+            /* transform: translateX(-50%) translateY(-50%); */
+            transform: translate(-50%, -50%) scale(1.2, 1.2) 
+                rotate(45deg);
+        }
+    </style>
+
+    <div id="container-2">
+        <div id="box-2"></div>
+    </div>
+
+    <style>
+        #container-3 {
+            background-color: yellow;
+            height: 150px;
+            margin-top: 10px;
+        }
+
+        #box-3 {
+            display: inline-block;
+            background-color: lightblue;
+            position: relative;
+            left: 100%;
+            top: 50%;
+            transform: translate(-100%, -50%);
+            font-size: 2rem;
+        }
+    </style>
+
+    <div id="container-3">
+        <span id="box-3">Plz Algin Me</span>
+    </div>
+
+    <style>
+        #container-4 {
+            background-color: yellow;
+            height: 150px;
+            margin-top: 10px;
+            position: relative;
+        }
+
+        #box-4{ 
+            position: absolute;
+            background-color: lightseagreen;
+            width: 75px;
+            height: 75px;
+            /* left: 0; */
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    </style>
+
+    <div id="container-4">
+        <div id="box-4"></div>
+    </div>
+
+    <style>
+        img {
+            margin-top: 10px;
+            width: 300px;
+            vertical-align: middle;
+        }
+
+        #greeting {
+            font-size: 2rem;
+            font-weight: bold;
+            vertical-align: middle;
+        }
+    </style>
+
+    <img src="img/1.jpg" alt="">
+    <span id="greeting">Hello Dear!</span>
+</body>
+</html>
