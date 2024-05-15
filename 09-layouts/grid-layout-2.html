@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout 2</title>
+</head>
+<body>
+    <h1>Gird Layout 2</h1>
+    Go <a href="index.html">home</a>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container-1 {
+            background-color: yellow;
+            display: grid;
+            height: 400px;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            justify-content: space-between;
+            align-content: space-between;
+            justify-items: center;
+            align-items: center;
+            /* gap: 10px 5px; */
+
+            .box {
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                border: 1px solid white;
+                font-size: 2rem;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: bold;
+
+                /* &:nth-child(5){
+                    align-self: end;
+                    order: -1;
+                }
+
+                &:nth-child(3){
+                    justify-self: start;
+                } */
+            }
+        }
+    </style>
+    <div id="container-1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Column Layout</title>
+</head>
+<body>
+    <h1>Multi Column Layout</h1>
+    Go <a href="index.html">back</a>
+    <style>
+        #container {
+            background-color: yellow;
+            /* height: 400px; */
+            border: 1px solid black;
+            padding: 0.5rem;
+            /* column-width: 200px; */
+            column-count: 2;
+            overflow-x:  scroll;
+            column-rule: 3px solid red;
+
+            h1 {
+                background-color: limegreen;
+                text-align: center;
+                column-span: all;
+            }
+
+            #box {
+                break-inside: avoid;
+                width: 100%;
+                height: 200px;
+                background-color: blue;
+            }
+        }
+    </style>
+    <div id="container">
+        <h1>This is a heading</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est porro eligendi aspernatur animi, consequuntur et dolore aliquid in quod, sapiente iure consectetur aliquam mollitia. Fuga laboriosam maiores iste fugit nemo!       </p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nisi adipisci cum, distinctio, quisquam quae aperiam, similique eveniet reiciendis illum quasi recusandae animi tempora deleniti ipsa accusantium repellat nam quam?</p>
+        <div id="box"></div>
+        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae repellat voluptatem, soluta repudiandae quos quisquam. Dolores, cum unde nostrum atque deleniti maxime et ullam consectetur rerum, aperiam velit dolore recusandae!</p> -->
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas quod magnam laboriosam tempore, excepturi atque? Cum facilis iusto quos tenetur esse repudiandae quas earum et aspernatur laborum exercitationem, quod recusandae?</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Maxime molestiae exercitationem accusantium maiores obcaecati? Consectetur voluptatem asperiores molestias nisi. Dignissimos modi repudiandae soluta iste optio nam dolor dolore porro labore.</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae obcaecati nam delectus quam! Quibusdam nemo eveniet quia quaerat obcaecati eos? Error eveniet assumenda quaerat debitis sed quo provident esse recusandae?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae obcaecati nam delectus quam! Quibusdam nemo eveniet quia quaerat obcaecati eos? Error eveniet assumenda quaerat debitis sed quo provident esse recusandae?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae obcaecati nam delectus quam! Quibusdam nemo eveniet quia quaerat obcaecati eos? Error eveniet assumenda quaerat debitis sed quo provident esse recusandae?</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae obcaecati nam delectus quam! Quibusdam nemo eveniet quia quaerat obcaecati eos? Error eveniet assumenda quaerat debitis sed quo provident esse recusandae?</p>
+    </div>
+</body>
+</html>
