@@ -1,0 +1,46 @@
+<!DOCTYPE html> <!-- DTD -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Variables</title>
+    <style>
+        :root {
+           /* --identifer: value; */
+           --my-color: blue;
+           --theme-color: yellow;
+        }
+
+        h1 {
+            color: var(--my-color);
+        }
+
+        div {
+            --abc: red;
+        }
+
+        h2 {
+            color: var(--abc);
+        }
+
+        section {
+            color: var(--abc);
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 Variables</h1>
+    <div>
+        <h2>Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Expedita, labore dolores! Ipsum nobis optio, facilis voluptates ut architecto. Molestias, debitis quod optio quis unde totam. Cum molestias ad nihil ea.</p>
+    </div>
+    <section>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci natus blanditiis fuga explicabo consequuntur quasi inventore eaque placeat expedita! Nobis odio dolores ex, nostrum cupiditate quasi mollitia voluptatem nesciunt amet.
+    </section>
+    <div>
+        <section>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet, alias doloremque. Rerum reprehenderit accusantium odit labore officia quo cum nobis mollitia pariatur! Laudantium aperiam tempore blanditiis porro voluptatum ipsum commodi?
+        </section>
+    </div>
+</body>
+</html>

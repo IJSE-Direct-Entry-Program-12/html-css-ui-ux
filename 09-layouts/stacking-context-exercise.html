@@ -9,31 +9,33 @@
     <h1>Stacking Context Exercise</h1>
     Go <a href="stacking-contexts.html">back</a>
     <style>
+        :root {
+            --width: 150px;
+            --height: 150px;
+        }
+
         #container1 {
-            width: 150px;
-            height: 150px;
+            width: var(--width);
+            height: var(--height);
             background-color: yellow;
-            z-index: 3;
         }
         #container2 {
-            width: 150px;
-            height: 150px;
+            width: var(--width);
+            height: var(--height);
             background-color: limegreen;
-            /* position: relative;
-            left: 75px;
-            top: -75px; */
-            transform: translate(50%, -75%);
-            z-index: 1;
+            /* transform: translate(50%, -75%); */
+            position: relative;
+            left: calc(var(--width) / 2);
+            top: calc(var(--height) / -4 * 3);
         }
         #container3 {
-            width: 150px;
-            height: 150px;
+            width: var(--width);
+            height: var(--height);
             background-color: lightsalmon;
-            transform: translate(75%, calc(-120% * 2));
-            /* position: relative;
-            left: 100px;
-            top: -325px; */
-            z-index: 2;
+            /* transform: translate(75%, calc(-120% * 2)); */
+            position: relative;
+            left: calc(var(--width) / 4 * 3);
+            top: calc(var(--height) / 100 * 120  * -2);
         }
         .circle{
             position: fixed;
@@ -46,21 +48,20 @@
 
         #container1 .circle{
             background-color: inherit;
-            left: 0px;
-            top: 0px;
-            /* z-index: 1; */
+            left: 50px;
+            top: 120px;
+            z-index: 1;
         }
 
         #container2 .circle{
             background-color: inherit;
-            z-index: 2000;
-            top: 100px;
-            left: 0;
+            z-index: 2;
         }
 
         #container3 .circle{
             background-color: inherit;
-            top: 75px;
+            top: 100px;
+            z-index: 3;
         }
     </style>
     <div id="container1">

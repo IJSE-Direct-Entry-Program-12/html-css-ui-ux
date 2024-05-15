@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Layout</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container-1 {
+            background-color: yellow;
+            height: 350px;
+            display: flex;
+            /* flex-direction: column-reverse; */
+            flex-wrap: wrap;
+            /* flex-flow: row wrap-reverse; */
+            justify-content: center;
+            align-items: center;
+            /* align-content: space-evenly; */
+        }
+
+        .box {
+            /* flex-basis: 75px; */
+            /* width: 75px; */
+            height: 75px;
+            background-color: red;
+            border: 1px solid black;
+            color: white;
+            font-size: 3rem;
+            /* flex-shrink: 1;
+            &:first-child, &:nth-child(3) {
+                flex-shrink: 50;
+            } */
+            /* flex-grow: 1;
+            &:first-child {
+                flex-grow: 10;
+            } */
+            flex: 0 0 75px;
+            &:nth-child(2){
+                /* order: 1; */
+                /* align-self: start; */
+            }
+            &:nth-child(3){
+                /* order: 2; */
+                /* align-self: end; */
+            }
+        }
+
+        #inline-1 {
+            display: inline-flex;
+            background-color: limegreen;
+            padding: 0.5rem;
+            flex-direction: row-reverse;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flex Layout</h1>
+    <div id="container-1">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+    </div>
+    This is an inline-element
+    <span id="inline-1">
+        <span>H</span>
+        <span>e</span>
+        <span>l</span>
+        <span>l</span>
+        <span>o</span>
+    </span>
+</body>
+</html>
