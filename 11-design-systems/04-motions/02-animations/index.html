@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 Animations</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #target {
+            background-color: lime;
+            width: 150px;
+            height: 150px;
+            margin-top: 150px;
+            animation-name: my-animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            position: relative;
+        }
+
+        @keyframes my-animation {
+            0%{
+                background-color: green;
+                left: 0;
+            }
+
+            12.5%{
+                background-color: red;
+                left: calc(50vw - 150px / 2);
+                transform: rotate(0deg);
+                border-radius: 0;
+            }
+
+            25% {
+                left: calc(50vw - 150px / 2);
+                transform: rotate(360deg);
+                border-radius: 100%;
+            }
+            26%{
+                transform: rotate(0deg);
+                border-radius: 0;
+            }
+
+            50% {
+                left: calc(100vw - 150px - 20px);
+                transform: rotate(0deg);
+            }
+
+            62.5%{
+                left: calc(50vw - 150px / 2);
+                transform: rotate(0deg);
+                border-radius: 0;
+            }
+
+            75%{
+                left: calc(50vw - 150px / 2);
+                transform: rotate(-360deg);
+                border-radius: 100%;
+            }
+
+            76%{
+                transform: rotate(0deg);
+                border-radius: 0;
+            }
+
+            100%{
+                left: 0;
+                background-color: blue;
+                border-radius: 0;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 Animations</h1>
+    <div id="target"></div>
+</body>
+</html>
