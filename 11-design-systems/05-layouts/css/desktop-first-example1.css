@@ -73,3 +73,8 @@ main p {
   text-align: justify;
   padding: 0 20px;
 }
+
+footer {
+    padding: 10px 10px 20px;
+    border-top: 1px solid lightgray;
+}

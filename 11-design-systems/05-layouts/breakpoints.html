@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakpoints</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container {
+            column-count: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Breakpoints</h1>
+    Go <a href="index.html">back</a>
+    <div id="container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus dolorem, illo quisquam totam cumque iusto laboriosam perspiciatis sit molestiae nobis, quam tenetur impedit tempore libero exercitationem odio, dolores inventore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus dolorem, illo quisquam totam cumque iusto laboriosam perspiciatis sit molestiae nobis, quam tenetur impedit tempore libero exercitationem odio, dolores inventore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus dolorem, illo quisquam totam cumque iusto laboriosam perspiciatis sit molestiae nobis, quam tenetur impedit tempore libero exercitationem odio, dolores inventore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus dolorem, illo quisquam totam cumque iusto laboriosam perspiciatis sit molestiae nobis, quam tenetur impedit tempore libero exercitationem odio, dolores inventore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus dolorem, illo quisquam totam cumque iusto laboriosam perspiciatis sit molestiae nobis, quam tenetur impedit tempore libero exercitationem odio, dolores inventore.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque ducimus dolorem, illo quisquam totam cumque iusto laboriosam perspiciatis sit molestiae nobis, quam tenetur impedit tempore libero exercitationem odio, dolores inventore.</p>
+    </div>
+    <style>
+        #card-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .card {
+            background-color: yellow;
+            width: 300px;
+            height: 350px;
+            flex-shrink: 0;
+        }
+
+
+        /* 540px */
+        /* 1236px */
+
+        @media all and (max-width: 540px) {
+            #container {
+                column-count: 1;
+            }
+        }
+
+        @media all and (max-width: 1236px) {
+            #card-container {
+                flex-wrap: wrap;
+            }
+        }
+    </style>
+    <div id="card-container">
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+    </div>
+</body>
+</html>
