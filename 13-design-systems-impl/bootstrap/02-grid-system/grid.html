@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bootstrap Grid system</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script defer src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        #container-1 {
+            background-color: yellow;
+        }
+
+        #container-2 {
+            background-color: lime;
+        }
+
+        .row > div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bootstrap Grid System</h1>
+    Go <a href="index.html">back</a>
+    <div id="container-1" class="container-fluid">
+        <div class="row">
+            <div class="col-6 col-md-4 col-lg-10">Column 1</div>
+            <div class="col-6 col-md-8 col-lg-2">Column 2</div>
+        </div>
+        <div class="row">
+            <div class="col-4">Column 1</div>
+            <div class="col-4">Column 2</div>
+            <div class="col-4">Column 3</div>
+        </div>
+        <div class="row">
+            <div class="col-10">Column 1</div>
+            <div class="col-2">Column 2</div>
+        </div>
+    </div>
+    <div id="container-2" class="container">
+        <div class="row">
+            <div class="col-6">Column 1</div>
+            <div class="col-6">Column 2</div>
+        </div>
+        <div class="row">
+            <div class="col-4">Column 1</div>
+            <div class="col-4">Column 2</div>
+            <div class="col-4">Column 3</div>
+        </div>
+        <div class="row">
+            <div class="col-10">Column 1</div>
+            <div class="col-2">Column 2</div>
+        </div>
+    </div>
+    <div id="container-3" class="container-fluid bg-primary-subtle">
+        <div class="row">
+            <div class="col-lg-6 col-12">1</div>
+            <div class="col-lg-3 col-12">2</div>
+            <div class="col-lg-3 col-12">3</div>
+        </div>
+    </div>
+</body>
+</html>
